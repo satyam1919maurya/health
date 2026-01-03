@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./adminDashboard.css";
+import "./admindashboard.css";
 import Sidebar from "../components/sidebar";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
