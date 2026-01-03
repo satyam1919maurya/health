@@ -90,8 +90,8 @@ const Doctor = () => {
     // console.log(d)
     closemodule();
     getdoctor();
-    showToast(d.msg)
-    console.log(d.msg``)
+    showToast(d.msg, "success")
+    // console.log(d.msg``)
   }
 
 
