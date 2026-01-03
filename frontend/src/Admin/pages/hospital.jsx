@@ -195,6 +195,8 @@ const Hospital = () => {
           </div>
           <div className="content">
             <table>
+              <thead>
+
               <tr>
                 <th>S.N.</th>
                 <th>Name</th>
@@ -205,10 +207,13 @@ const Hospital = () => {
                 {/* <th>Picture</th> */}
                 <th>Action</th>
               </tr>
+              </thead>
+              <tbody>
+
 
               {hospitaldata.map((x, i) => {
                 return (
-                  <tr>
+                  <tr key={x._id}>
                     <td>{i + 1}</td>
                     <td>{x.name}</td>
                     <td>{x.category}</td>
@@ -222,6 +227,7 @@ const Hospital = () => {
                   </tr>
                 )
               })}
+                </tbody>
             </table>
           </div>
 

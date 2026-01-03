@@ -123,7 +123,7 @@ const Doctor = () => {
 
   const gethospital = async () => {
     // alert(name)
-    const re = await fetch(`${import.meta.env.VITE_API_URL}/doctor`, {
+    const re = await fetch(`${import.meta.env.VITE_API_URL}/hospital`, {
       method: "GET",
       headers: { "content-type": "application/json" },
 
@@ -220,6 +220,8 @@ const Doctor = () => {
         </Activity> */}
         <div className="content">
           <table>
+            <thead>
+
             <tr>
               <th>S.N.</th>
               <th>Name</th>
@@ -232,6 +234,9 @@ const Doctor = () => {
               <th>Action</th>
 
             </tr>
+            </thead>
+            <tbody>
+
 
             {
               doctors.map((x, i) => {
@@ -254,6 +259,7 @@ const Doctor = () => {
 
               })
             }
+              </tbody>
           </table>
         </div>
 

@@ -232,22 +232,78 @@
   }
 }
 
-@media screen and (max-width:400px) {
-  .header .link {
-    /* display: inline-block; */
-    display: flex;
-    background-color: red;
+@media screen and (max-width: 500px) {
+
+  /* ===== Header ===== */
+  .header {
+    padding: 10px 15px;
   }
 
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  /* Hide navbar links */
   .navbar {
-    background-color: red;
     display: none;
   }
 
-  .login-btn {
-    background-color: yellow;
+  /* Login button smaller */
+  .login-btn button {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  /* ===== Hero Section ===== */
+  .hero {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* ===== Services ===== */
+  .service-boxes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service {
+    width: 90%;
+  }
+
+  /* ===== Cards ===== */
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  /* ===== Fix section ===== */
+  .new {
+    display: none;
   }
 }
+
 
 
 /* --------card section ---------*/
