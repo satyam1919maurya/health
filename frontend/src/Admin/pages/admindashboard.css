@@ -1,0 +1,90 @@
+/* Page Layout */
+.admin-page {
+  margin-left: 220px; /* adjust based on your sidebar width */
+  padding: 20px;
+  min-height: 100vh;
+  background: #f4f6fb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.admin-header {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  padding: 25px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Hero Section */
+.hero-section {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  color: #182848;
+}
+
+.hero-text p {
+  /* color: #555; */
+  margin-top: 5px;
+}
+
+.hero-img {
+  width: 280px;
+  border-radius: 12px;
+}
+
+/* Dashboard Cards */
+.dashboard-content {
+  /* margin-top: 40px; */
+ 
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+   display: flex;
+  justify-content: space-around
+}
+
+/* Premium Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #182848;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.chi p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #4b6cb7;
+  
+}

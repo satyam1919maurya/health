@@ -1,0 +1,153 @@
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Background ---------- */
+.login-page {
+  height: 100vh;
+  /* background: linear-gradient(135deg, #3498db, #2e86de); */
+  background-color: #edefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+/* ---------- Card ---------- */
+.login-card {
+  background: #ffffff;
+  width: 380px;
+  max-width: 90%;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Logo Section ---------- */
+.login-logo img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  
+}
+
+.login-logo h2 {
+  color: #2980b9;
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.login-logo p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* ---------- Form ---------- */
+form {
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 5px 0px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.4px solid #dfe6e9;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.lb{
+  margin-top: 5px;
+}
+
+input:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.25);
+}
+
+/* ---------- Button ---------- */
+.login-btn {
+  /* width: 100%; */
+  padding: 10px;
+  /* background: linear-gradient(135deg, #3498db, #2980b9); */
+  /* background-color: red; */
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login-page-btn{
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  width: 100%;
+  
+}
+.login-page-btn:hover{
+  background: linear-gradient(135deg, #2980b9, #2573a6);
+
+}
+
+.login-btn:hover {
+  transform: scale(1.02);
+}
+
+/* ---------- Register Link ---------- */
+.register-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 18px;
+  color: #555;
+}
+
+.register-link a {
+  color: #2980b9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  .login-logo h2 {
+    font-size: 20px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+}

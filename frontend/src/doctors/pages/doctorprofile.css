@@ -1,0 +1,292 @@
+.main {
+  display: flex;
+  background: #f4f6f8;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.m1-container {
+  flex: 1;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+table th {
+  background: #007bff;
+  color: white;
+}
+
+.btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-success { background: #28a745; }
+.btn-danger { background: #dc3545; }
+.btn-primary { background: #007bff; }
+
+/* Modal Styling */
+.profile-form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.form-header h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.form-close {
+  text-align: right;
+  cursor: pointer;
+}
+
+.form-row {
+  display: flex;
+  /* flex-direction: column; */
+  margin-bottom: 12px;
+}
+
+.form-row label {
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.form-row input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-btn:hover {
+  background: #0056b3;
+}
+
+
+
+
+/* ===== Responsive patch for Doctorappointment (tablet & phone) ===== */
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  /* Allow sidebar to shrink and content to use more space */
+  .main {
+    flex-direction: row; /* keep sidebar left but allow smaller width */
+    align-items: flex-start;
+  }
+
+  /* reduce main container padding */
+  .m1-container {
+    padding: 16px;
+  }
+
+  /* header row gets smaller */
+  .header-row h1 {
+    font-size: 1.4rem;
+  }
+
+  /* table: reduce padding, font-size */
+  .appt-table th,
+  .appt-table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  /* modal sizing for tablet */
+  .profile-form {
+    width: 520px;
+    padding: 16px;
+  }
+
+  /* modal form title smaller */
+  .form-header h1 {
+    font-size: 1.05rem;
+  }
+
+  /* buttons slightly smaller */
+  .btn {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Phone (<= 640px) */
+@media (max-width: 640px) {
+  /* Stack sidebar above content to avoid horizontal layout problems */
+  .main {
+    flex-direction: column;
+  }
+
+  /* Sidebar styles may remain fixed width; ensure content uses full width */
+  .m1-container {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* Header: center and shrink */
+  .header-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .header-row h1 {
+    text-align: left;
+    font-size: 1.25rem;
+  }
+  .header-row .right {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  /* Make table horizontally scrollable rather than squeezing */
+  .content {
+    padding: 8px;
+  }
+  .content .appt-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .appt-table thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .appt-table tbody {
+    display: block;
+    width: 100%;
+  }
+  .appt-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  /* Reduce table cell padding & font-size */
+  .appt-table th,
+  .appt-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  /* Empty state padding */
+  .appt-table .empty {
+    padding: 18px 8px;
+  }
+
+  /* Modal becomes near full-screen on mobile */
+  .modal-overlay {
+    padding: 12px;
+  }
+  .profile-form {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 10px;
+    padding: 14px;
+    box-sizing: border-box;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  /* Modal close button bigger and easier to tap */
+  .form-close h3 {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  /* Form rows: compact spacing */
+  .form-row {
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .form-row label {
+    font-size: 13px;
+  }
+  .form-row input,
+  .form-row textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Message cell: allow wrapping on small screens */
+  .message-cell {
+    white-space: normal;
+    max-width: none;
+  }
+
+  /* Buttons full width in modal actions */
+  .form-actions {
+    flex-direction: column;
+    gap: 8px;
+    justify-content: stretch;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Optional: small-screen visual tweaks for very small phones */
+@media (max-width: 380px) {
+  .header-row h1 { font-size: 1.1rem; }
+  .appt-table th, .appt-table td { font-size: 12px; padding: 7px; }
+  .profile-form { padding: 12px; }
+}

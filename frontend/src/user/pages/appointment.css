@@ -1,0 +1,131 @@
+/* ================================
+   Professional Appointment Form
+   Compact | No Margins | Aligned Layout
+   ================================ */
+
+.appointment-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f8fa;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+ 
+  
+}
+
+.appointment-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 720px;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+   /* background-color: red; */
+   margin-top: 30px;
+}
+
+.appointment-box h2 {
+  text-align: center;
+  color: #006d77;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+/* --------------------- Row Layout --------------------- */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* --------------------- Input Groups --------------------- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-group.half {
+  flex: 1 1 48%;
+}
+
+.input-group.full {
+  flex: 1 1 100%;
+}
+
+/* --------------------- Labels --------------------- */
+.input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #004b6b;
+  line-height: 1.2;
+  
+  padding: 10px;
+  /* background-color: green; */
+}
+
+/* --------------------- Inputs --------------------- */
+.input-group input,
+.input-group select,
+.input-group textarea {
+  border: 1px solid #d0d7dd;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background: #fdfdfd;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  height: 34px;
+  /* background-color: red !important; */
+  
+}
+
+.input-group textarea {
+  height: 55px;
+  resize: none;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #007b83;
+  box-shadow: 0 0 4px rgba(0, 123, 131, 0.3);
+}
+
+/* --------------------- Button --------------------- */
+.submit-btn {
+  background: linear-gradient(135deg, #007b83, #005f6b);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #005f6b, #004b6b);
+  box-shadow: 0 3px 8px rgba(0, 91, 107, 0.3);
+}
+
+/* --------------------- Responsive --------------------- */
+@media (max-width: 600px) {
+  .appointment-box {
+    padding: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .input-group.half {
+    flex: 1 1 100%;
+  }
+}

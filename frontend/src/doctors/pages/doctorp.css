@@ -1,0 +1,418 @@
+.doctor-dashboard {
+  display: flex;
+  background: #f6f8fb;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  
+}
+
+/* Doctor Profile Section */
+.doctor-profile-card {
+  display: flex;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.doctor-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #007bff;
+}
+
+.profile-right h2 {
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.profile-right p {
+  color: #444;
+  margin: 4px 0;
+}
+
+.edit-btn {
+  margin-top: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.edit-btn:hover {
+  background: #0056b3;
+}
+
+/* Stats Cards */
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  font-size: 1rem;
+  color: #555;
+}
+
+.stat-card p {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* Appointment Section */
+.appointment-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.appointment-section h2 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointment-table th,
+.appointment-table td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.appointment-table th {
+  background: #007bff;
+  color: white;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.status.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.upcoming {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* Quick Actions */
+.quick-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.action-btn {
+  flex: 1;
+  background: #007bff;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.action-btn:hover {
+  background: #0056b3;
+}
+
+
+
+.popup{
+  padding: 10px;
+  height: 550px;
+  width: 550px;
+   background-color: rgb(243, 239, 239);
+  position: fixed;
+  top: 70px;
+  left: 370px;
+  border-radius: 5px;
+
+}
+
+.close{
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.popup button{
+  width: 100%;
+  padding: 5px;
+  border-radius: 8px;
+   background: #007bff;
+   color: white;
+}
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .doctor-profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats-container {
+    flex-direction: column;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+  }
+}
+
+
+/* ===== Responsive patch for Doctorp (tablet & phone) ===== */
+
+/* Tablet: up to 1024px */
+@media (max-width: 1024px) {
+  /* allow layout to breathe on medium screens */
+  .main {
+    align-items: flex-start;
+  }
+
+  .m1-container {
+    padding: 18px;
+  }
+
+  .doctor-profile-card {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .doctor-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .profile-right h2 {
+    font-size: 1.25rem;
+  }
+
+  .stats-container {
+    gap: 1rem;
+  }
+
+  .stat-card p {
+    font-size: 1.4rem;
+  }
+
+  .appointment-section {
+    padding: 1rem;
+  }
+
+  .appointment-table th,
+  .appointment-table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .quick-actions .action-btn {
+    padding: 0.65rem;
+    font-size: 0.95rem;
+  }
+
+  /* Popup edit form */
+  .popup {
+    width: 520px;
+    max-width: 92%;
+    padding: 16px;
+  }
+}
+
+/* Phone: up to 640px */
+@media (max-width: 640px) {
+  /* stack sidebar above content (no JS change) */
+  .main {
+    flex-direction: column;
+  }
+
+  .m1-container {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* Profile card stacks vertically */
+  .doctor-profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .profile-left,
+  .profile-right {
+    width: 100%;
+  }
+
+  .doctor-img {
+    width: 100px;
+    height: 100px;
+    border-width: 3px;
+  }
+
+  .profile-right h2 {
+    font-size: 1.15rem;
+  }
+
+  .profile-right p {
+    font-size: 0.95rem;
+  }
+
+  /* Stats stack vertically */
+  .stats-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .stat-card {
+    text-align: left;
+    padding: 12px;
+  }
+
+  .stat-card p {
+    font-size: 1.4rem;
+  }
+
+  /* Appointment table becomes horizontally scrollable */
+  .appointment-section {
+    padding: 10px;
+  }
+
+  .appointment-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .appointment-table thead,
+  .appointment-table tbody,
+  .appointment-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .appointment-table th,
+  .appointment-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  /* Quick actions stack */
+  .quick-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  /* Popup: full width modal at bottom of page */
+  .popup {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: none;
+    box-shadow: 0 -6px 30px rgba(0,0,0,0.12);
+  }
+
+  .popup .h {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .popup input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .popup label {
+    font-size: 13px;
+  }
+
+  .edit-btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* reduce margins and gaps inside popup */
+  .popup label + input {
+    margin-bottom: 8px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .profile-right p { font-size: 0.9rem; }
+  .profile-right h2 { font-size: 1.05rem; }
+  .appointment-table th, .appointment-table td { font-size: 12px; padding: 6px; }
+  .action-btn { font-size: 0.9rem; padding: 9px; }
+}

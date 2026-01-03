@@ -1,0 +1,77 @@
+/* ================================
+   Welcome Page — Success Screen
+   Elegant | Minimal | Responsive
+   ================================ */
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0f7f7, #ffffff);
+  font-family: "Poppins", sans-serif;
+}
+
+.welcome-card {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 91, 107, 0.2);
+}
+
+.welcome-card h1 {
+  color: #007b83;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.welcome-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.success-icon {
+  font-size: 60px;
+  color: #00a676;
+  margin: 10px 0 25px;
+}
+
+/* -------------- Button -------------- */
+.home-btn {
+  background: linear-gradient(135deg, #007b83, #005f6b);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn:hover {
+  background: linear-gradient(135deg, #005f6b, #004b6b);
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .welcome-card {
+    padding: 30px 25px;
+  }
+
+  .welcome-card h1 {
+    font-size: 22px;
+  }
+}

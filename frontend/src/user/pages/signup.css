@@ -1,0 +1,185 @@
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Background ---------- */
+.signup-page {
+  height: 99vh;
+  /* background: linear-gradient(135deg, #2e86de, #3498db); */
+  display: flex;
+  background-color: #edefef;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+/* ---------- Signup Card ---------- */
+.signup-card {
+  background: #ffffff;
+  width: 380px;
+  padding: 3px 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 640px;
+  margin-top: 30px;
+}
+
+.signup-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Logo Section ---------- */
+.signup-logo img {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+
+.signup-logo h2 {
+  color: #2e86de;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.signup-logo p {
+  color: #7f8c8d;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+/* ---------- Form Styling ---------- */
+form {
+  text-align: left;
+ 
+}
+
+/* Reduce space between labels and fields */
+label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  margin: 0px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1.4px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+   margin: 0px !important;
+}
+.input-sign input{
+   /* padding: 0px; */
+   margin:1px;
+   /* background-color: red; */
+}
+.input-sign label{
+  /* background-color: green; */
+  margin: -4px;
+}
+.gen label{
+  background-color: blue;
+  display: block;
+  
+  /* width: 100%; */
+}
+
+input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.2);
+}
+
+/* ---------- Gender Section ---------- */
+.gender-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 13.5px;
+  color: #34495e;
+}
+
+.gender-options input {
+  accent-color: #2e86de;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ---------- Button ---------- */
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #3498db, #2e86de);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 6px;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(135deg, #2e86de, #2574a9);
+  transform: translateY(-1px);
+}
+
+/* ---------- Login Redirect ---------- */
+.login-link {
+  text-align: center;
+  font-size: 13.5px;
+  margin-top: 15px;
+  color: #555;
+}
+
+.login-link a {
+  color: #2980b9;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .signup-card {
+    width: 90%;
+    padding: 24px 20px 26px;
+  }
+
+  .signup-logo h2 {
+    font-size: 18px;
+  }
+
+  .signup-btn {
+    font-size: 14px;
+  }
+}

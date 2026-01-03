@@ -1,0 +1,139 @@
+/* ---------- Hospital Form (Modal Style) ---------- */
+.hospital-form {
+  display: none; /* Toggle with .active in JS */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  width: 480px;
+  max-width: 95%;
+  padding: 22px 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+  font-family: "Poppins", system-ui, sans-serif;
+  z-index: 999;
+  color: #1f2f3a;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Show when active */
+.hospital-form.active {
+  display: block;
+}
+
+/* ---------- Close Button ---------- */
+.form-close {
+  text-align: right;
+  margin-bottom: 5px;
+}
+.form-close h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #7a7a7a;
+  cursor: pointer;
+  padding: 3px 7px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.form-close h3:hover {
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+
+/* ---------- Header ---------- */
+.form-header h1 {
+  text-align: center;
+  font-size: 22px;
+  color: #1565c0;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Row Layout ---------- */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 12px;
+}
+
+.form-row label {
+  width: 130px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  padding-right: 8px;
+}
+
+/* ---------- Inputs ---------- */
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1.4px solid #dce3ea;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1f2f3a;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 6px rgba(30, 136, 229, 0.25);
+}
+
+.form-row select {
+  cursor: pointer;
+}
+
+/* ---------- Button ---------- */
+.form-btn {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.form-btn:hover {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  transform: translateY(-1px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .hospital-form {
+    width: 92%;
+    padding: 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .form-row input,
+  .form-row select {
+    width: 100%;
+  }
+}
