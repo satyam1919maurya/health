@@ -1,7 +1,7 @@
 
 // import React from 'react'
  import React from "react";
-import "./Welcome.css";
+import "./welcome.css";
 import { useNavigate } from "react-router-dom";
 import Header from "../components/header";
 

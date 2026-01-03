@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Appointment.css";
+import "./appointment.css";
 import Header from "../components/header";
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
