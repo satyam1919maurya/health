@@ -1,7 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const app = express()
-const PORT = 5000
+
 const cors = require("cors")
 const nodemailer = require("nodemailer")
 require('dotenv').config();
@@ -13,8 +13,10 @@ const sendDoctorWelcomeEmail = require("./emails/doctoremail")
 app.use(express.json())
 app.use(cors())
 // building connection to mongodb
+const dburl = process.env.MONGO_URI
 
-const con = mongoose.connect("mongodb://localhost:27017/Hospital")
+// const con = mongoose.connect("mongodb://localhost:27017/Hospital")
+const con = mongoose.connect(dburl)
 
 con.then(() => {
     console.log("Connection Done")
@@ -326,7 +328,7 @@ app.get("/appointment", async (req, res) => {
 
 
 
-
+const PORT = process.env.PORT || 5000
 
 
 app.listen(PORT, () => {
