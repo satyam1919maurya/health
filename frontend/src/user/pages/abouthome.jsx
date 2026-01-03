@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Abouthome.css";
+import "./abouthome.css";
 import Header from "../components/header";
 import { Link } from "react-router-dom";
 
